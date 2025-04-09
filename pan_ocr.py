@@ -29,7 +29,7 @@ class PANProcessor:
             'jul': 7, 'aug': 8, 'sep': 9, 'oct': 10, 'nov': 11, 'dec': 12
         }
         self.excel_headers = ["Name", "Father's Name", "PAN Number", "DOB"]
-        self.model = YOLO("runs/obb/train4/weights/best.pt")
+        self.model = YOLO("best.pt")
         pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
     def preprocess(self, image):
