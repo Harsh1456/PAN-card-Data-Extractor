@@ -26,7 +26,7 @@ class PANProcessor:
             'jan': 1, 'feb': 2, 'mar': 3, 'apr': 4, 'may': 5, 'jun': 6,
             'jul': 7, 'aug': 8, 'sep': 9, 'oct': 10, 'nov': 11, 'dec': 12
         }
-        self.model = YOLO("runs/obb/train4/weights/best.pt")
+        self.model = YOLO("best.pt")
         pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
     def preprocess(self, image):
