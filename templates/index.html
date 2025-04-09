@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PAN Card Information Extractor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Extract PAN Card Information</h1>
+        
+        <div class="drop-zone" id="dropZone">
+            <span class="drop-text">Drag & Drop PAN Card Image Here</span>
+            <input type="file" id="fileInput" hidden accept="image/*">
+            <button class="browse-btn" onclick="document.getElementById('fileInput').click()">
+                Browse Files
+            </button>
+        </div>
+
+        <div class="processing-container hidden">
+            <div class="file-info" id="fileInfo"></div>
+            <div class="spinner"></div>
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
